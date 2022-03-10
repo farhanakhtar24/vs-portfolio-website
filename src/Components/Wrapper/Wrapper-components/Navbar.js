@@ -1,23 +1,23 @@
 import React from 'react';
-import vsIcon from '../../../Assets/Taskbar Icons/VS_code_icon.svg';
-import Cross_Icon from '../../../Assets/Taskbar Icons/Cross_Icon.svg';
-import Maximize_icon from '../../../Assets/Taskbar Icons/Maximize_icon.svg';
-import Minimize_icon from '../../../Assets/Taskbar Icons/Minimize_icon.svg';
+import vsIcon from '../../../Assets/VS_code_icon.svg';
+import { MdClose as Cross } from 'react-icons/md';
+import { BiWindows as Maximize } from 'react-icons/bi';
+import { VscChromeMinimize as Minimize } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
 
 const taskBarOptions = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", "Help"];
 
 const Navbar = (props) => {
     return (
-        <div className='flex justify-between border-b-2 border-gray-800 bg-NavbarBg text-NavbarFont items-center'>
+        <div className='basis-1/11 flex justify-between border-b-2 border-gray-900 bg-NavbarBg text-NavbarFont items-center'>
             {/* vs logo */ }
 
             {/* file edit selecton view go run terminal help */ }
-            <div className=''>
-                <ul className='flex gap-2 items-center'>
-                    <li><img src={ vsIcon } alt="vs-code-icon" className='px-2 py-1 w-9 mr-1' /></li>
+            <div className='sm'>
+                <ul className='flex items-center h-full'>
+                    <li><img src={ vsIcon } alt="vs-code-icon" className='px-2 w-8' /></li>
                     { taskBarOptions.map(option => {
-                        return <li className='text-sm'>{ option }</li>
+                        return <li className='text-sm px-2 py-0.5 hover:bg-NavbarHover cursor-pointer'>{ option }</li>
                     }) }
                 </ul>
             </div>
@@ -29,10 +29,10 @@ const Navbar = (props) => {
 
             <div></div>
             {/* closing minimize maximize buttons */ }
-            <div className='flex gap-2'>
-                <Link to='/home'><img src={ Minimize_icon } alt="vs-code-icon" /></Link>
-                <Link to='/home'><img src={ Maximize_icon } alt="vs-code-icon" /></Link>
-                <Link to='/home'><img src={ Cross_Icon } alt="vs-code-icon" /></Link>
+            <div className='flex items-center'>
+                <Link to='/home'><Minimize className='w-8 h-6 hover:bg-NavbarHover' /></Link>
+                <Link to='/home'><Maximize className='w-8 h-6 p-1 hover:bg-NavbarHover' /></Link>
+                <Link to='/home'><Cross className='w-8 h-6 hover:bg-NavbarHover' /></Link>
             </div>
         </div>
     );

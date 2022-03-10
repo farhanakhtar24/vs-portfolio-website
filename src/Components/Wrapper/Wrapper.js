@@ -5,11 +5,13 @@ import Sidebar from './Wrapper-components/Sidebar';
 import Taskbar from './Wrapper-components/Taskbar';
 const Wrapper = (props) => {
     return (
-        <div >
+        <div className='flex flex-col h-screen w-screen'>
             <Navbar></Navbar>
-            <Sidebar></Sidebar>
-            <FileIndexer></FileIndexer>
-            { props.children }
+            <div className='basis-9/11 flex flex-grow'>
+                <Sidebar></Sidebar>
+                <FileIndexer></FileIndexer>
+                { props.children }
+            </div>
             <Taskbar></Taskbar>
         </div>
     )
