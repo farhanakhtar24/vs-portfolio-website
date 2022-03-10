@@ -7,7 +7,7 @@ const Wrapper = (props) => {
     return (
         <div className='flex flex-col h-screen w-screen'>
             <Navbar></Navbar>
-            <div className='basis-9/11 flex flex-grow'>
+            <div className='flex flex-1'>
                 <Sidebar></Sidebar>
                 <FileIndexer></FileIndexer>
                 { props.children }

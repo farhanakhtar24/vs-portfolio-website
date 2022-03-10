@@ -2,7 +2,7 @@ import React from 'react';
 
 const Taskbar = () => {
     return (
-        <div className='basis-1/11'>TaskBar</div>
+        <div className='text-xs'>TaskBar</div>
     )
 }
 

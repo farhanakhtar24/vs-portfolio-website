@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Navbar {
+	@apply justify-between border-b-2 border-gray-900 bg-NavbarBg text-NavbarFont items-center;
+}

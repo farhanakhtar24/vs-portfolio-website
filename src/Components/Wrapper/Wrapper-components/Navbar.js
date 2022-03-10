@@ -9,11 +9,11 @@ const taskBarOptions = ["File", "Edit", "Selection", "View", "Go", "Run", "Termi
 
 const Navbar = (props) => {
     return (
-        <div className='basis-1/11 flex justify-between border-b-2 border-gray-900 bg-NavbarBg text-NavbarFont items-center'>
-            {/* vs logo */ }
+        <div className='flex Navbar'>
 
             {/* file edit selecton view go run terminal help */ }
-            <div className='sm'>
+            <div className=''>
+                {/* vs logo */ }
                 <ul className='flex items-center h-full'>
                     <li><img src={ vsIcon } alt="vs-code-icon" className='px-2 w-8' /></li>
                     { taskBarOptions.map(option => {
@@ -23,7 +23,7 @@ const Navbar = (props) => {
             </div>
 
             {/* My name - Visual Studio Code */ }
-            <div className='items-center'>
+            <div className='text-center'>
                 <span className='text-sm font-semibold'>Mohd Farhan Akhtar - Visual Studio Code</span>
             </div>
 
