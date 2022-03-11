@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 const taskBarOptions = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", "Help"];
 
-const Navbar = (props) => {
+const Navbar = () => {
     return (
-        <div className='flex Navbar'>
+        <div className='Navbar'>
 
             {/* file edit selecton view go run terminal help */ }
             <div className=''>

@@ -18,53 +18,69 @@ const Sidebar = () => {
         dispatch(activeIconSliceActions.setActiveIcon(page));
     }
 
-    const activeIconColor = 'text-SideBarTextActive';
-    const activeIconBorder = 'border-l-2 border-l-SideBarTextActive';
+    const activeIconColor = 'text-Sidebar-IconActive';
+    const activeIconBorder = 'border-l-2 border-l-Sidebar-IconActive';
 
     return (
-        <div className='flex flex-col justify-between h-full bg-NavbarBg border-b-2 border-gray-900'>
+        <div className='Sidebar-Main-Div'>
 
             {/* upar ke 5 icons */ }
             <ul>
-                <li className={ `${activeIcon === 'home' ? activeIconBorder : ''} p-2` }>
-                    <NavLink to='/home' onClick={ () => activeIconHandler('home') }>
-                        <FilesIcon className={ `text-2xl  hover:text-SideBarTextHover  ${activeIcon === 'home' ? activeIconColor : 'text-SideBarText'}` } />
-                    </NavLink>
-                </li>
-                <li className={ `${activeIcon === 'about' ? activeIconBorder : ''} p-2` }>
-                    <NavLink to='/about' onClick={ () => activeIconHandler('about') }>
-                        <SearchIcon className={ `text-2xl  hover:text-SideBarTextHover  ${activeIcon === 'about' ? activeIconColor : 'text-SideBarText'}` } />
-                    </NavLink>
-                </li>
-                <li className={ `${activeIcon === 'github' ? activeIconBorder : ''} p-2` }>
-                    <NavLink to='/github' onClick={ () => activeIconHandler('github') }>
-                        <GitBranchIcon className={ `text-2xl  hover:text-SideBarTextHover  ${activeIcon === 'github' ? activeIconColor : 'text-SideBarText'}` } />
-                    </NavLink>
-                </li>
-                <li className={ `${activeIcon === 'projects' ? activeIconBorder : ''} p-2` }>
-                    <NavLink to='/projects' onClick={ () => activeIconHandler('projects') }>
-                        <ProjectsIcon className={ `text-2xl  hover:text-SideBarTextHover  ${activeIcon === 'projects' ? activeIconColor : 'text-SideBarText'}` } />
-                    </NavLink>
-                </li>
-                <li className={ `${activeIcon === 'contact' ? activeIconBorder : ''} p-2` }>
-                    <NavLink to='/contact' onClick={ () => activeIconHandler('contact') }>
-                        <FilePdfIcon className={ `text-2xl  hover:text-SideBarTextHover  ${activeIcon === 'contact' ? activeIconColor : 'text-SideBarText'}` } />
-                    </NavLink>
-                </li>
+                <NavLink
+                    to='/home'
+                    onClick={ () => activeIconHandler('home') }
+                    className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'home' ? activeIconColor : ''}` } >
+                    <li className={ `${activeIcon === 'home' ? activeIconBorder : ''} p-2` }>
+                        <FilesIcon />
+                    </li>
+                </NavLink>
+                <NavLink
+                    to='/contact'
+                    onClick={ () => activeIconHandler('contact') }
+                    className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'contact' ? activeIconColor : ''}` } >
+                    <li className={ `${activeIcon === 'contact' ? activeIconBorder : ''} p-2` }>
+                        <SearchIcon />
+                    </li>
+                </NavLink>
+                <NavLink
+                    to='/github'
+                    onClick={ () => activeIconHandler('github') }
+                    className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'github' ? activeIconColor : ''}` }>
+                    <li className={ `${activeIcon === 'github' ? activeIconBorder : ''} p-2` }>
+                        <GitBranchIcon />
+                    </li>
+                </NavLink>
+                <NavLink
+                    to='/projects'
+                    onClick={ () => activeIconHandler('projects') }
+                    className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'projects' ? activeIconColor : ''}` } >
+                    <li className={ `${activeIcon === 'projects' ? activeIconBorder : ''} p-2` }>
+                        <ProjectsIcon />
+                    </li>
+                </NavLink>
+                <NavLink
+                    to='/about'
+                    onClick={ () => activeIconHandler('about') }
+                    className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'about' ? activeIconColor : ''}` }>
+                    <li className={ `${activeIcon === 'about' ? activeIconBorder : ''} p-2` }>
+                        <FilePdfIcon />
+                    </li>
+                </NavLink>
+
             </ul>
 
             {/* neeche ke 2 icons */ }
             <ul>
-                <li className='p-2'>
-                    <NavLink to='/home'>
-                        <UserIcon className='text-2xl text-SideBarText hover:text-SideBarTextHover' />
-                    </NavLink>
-                </li>
-                <li className='p-2'>
-                    <NavLink to='/home'>
-                        <SettingsIcon className='text-2xl text-SideBarText hover:text-SideBarTextHover' />
-                    </NavLink>
-                </li>
+                <NavLink to='/home' className='hover:text-Sidebar-IconHover'>
+                    <li className='p-2'>
+                        <UserIcon />
+                    </li>
+                </NavLink>
+                <NavLink to='/home' className='hover:text-Sidebar-IconHover'>
+                    <li className='p-2'>
+                        <SettingsIcon />
+                    </li>
+                </NavLink>
             </ul>
 
         </div >

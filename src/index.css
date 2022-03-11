@@ -3,5 +3,13 @@
 @tailwind utilities;
 
 .Navbar {
-	@apply justify-between border-b-2 border-gray-900 bg-NavbarBg text-NavbarFont items-center;
+	@apply flex justify-between border-b-2 border-gray-900 bg-NavbarBg text-NavbarFont items-center;
+}
+
+.Sidebar-Main-Div {
+	@apply flex flex-col justify-between h-full bg-Sidebar-Bg text-Sidebar-IconInactive border-r-2 border-gray-900 text-2xl;
+}
+
+.FileIndexer-Headings {
+	@apply text-xs font-bold text-NavbarFont uppercase p-2 flex items-center justify-items-start tracking-wider;
 }
