@@ -17,7 +17,15 @@ module.exports = {
         FileIndexer: {
           Bg: "#1F2428",
           HeadingTextColour: "#C4C4C4",
-          HTMLcolor: "#E44D26",
+          Hover: "#24292E",
+          Active: "#24292E",
+          Icons: {
+            Home: "#00D8FF",
+            Contact: "#42A5F5",
+            Projects: "#FFCA28",
+            Github: "#FFFFFF",
+            About: "#E44D26"
+          }
         }
       },
     },

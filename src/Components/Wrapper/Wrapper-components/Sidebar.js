@@ -12,11 +12,11 @@ import { activeIconSliceActions } from '../../../Redux/active-icon-slice';
 
 const Sidebar = () => {
     const activeIcon = useSelector(state => state.activeIcon.value);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    const activeIconHandler = function (page) {
-        dispatch(activeIconSliceActions.setActiveIcon(page));
-    }
+    // const activeIconHandler = function (page) {
+    //     dispatch(activeIconSliceActions.setActiveIcon(page));
+    // }
 
     const activeIconColor = 'text-Sidebar-IconActive';
     const activeIconBorder = 'border-l-2 border-l-Sidebar-IconActive';
@@ -28,7 +28,7 @@ const Sidebar = () => {
             <ul>
                 <NavLink
                     to='/home'
-                    onClick={ () => activeIconHandler('home') }
+                    // onClick={ () => activeIconHandler('home') }
                     className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'home' ? activeIconColor : ''}` } >
                     <li className={ `${activeIcon === 'home' ? activeIconBorder : ''} p-2` }>
                         <FilesIcon />
@@ -36,7 +36,7 @@ const Sidebar = () => {
                 </NavLink>
                 <NavLink
                     to='/contact'
-                    onClick={ () => activeIconHandler('contact') }
+                    // onClick={ () => activeIconHandler('contact') }
                     className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'contact' ? activeIconColor : ''}` } >
                     <li className={ `${activeIcon === 'contact' ? activeIconBorder : ''} p-2` }>
                         <SearchIcon />
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 </NavLink>
                 <NavLink
                     to='/github'
-                    onClick={ () => activeIconHandler('github') }
+                    // onClick={ () => activeIconHandler('github') }
                     className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'github' ? activeIconColor : ''}` }>
                     <li className={ `${activeIcon === 'github' ? activeIconBorder : ''} p-2` }>
                         <GitBranchIcon />
@@ -52,7 +52,7 @@ const Sidebar = () => {
                 </NavLink>
                 <NavLink
                     to='/projects'
-                    onClick={ () => activeIconHandler('projects') }
+                    // onClick={ () => activeIconHandler('projects') }
                     className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'projects' ? activeIconColor : ''}` } >
                     <li className={ `${activeIcon === 'projects' ? activeIconBorder : ''} p-2` }>
                         <ProjectsIcon />
@@ -60,7 +60,7 @@ const Sidebar = () => {
                 </NavLink>
                 <NavLink
                     to='/about'
-                    onClick={ () => activeIconHandler('about') }
+                    // onClick={ () => activeIconHandler('about') }
                     className={ `hover:text-Sidebar-IconHover  ${activeIcon === 'about' ? activeIconColor : ''}` }>
                     <li className={ `${activeIcon === 'about' ? activeIconBorder : ''} p-2` }>
                         <FilePdfIcon />
