@@ -19,6 +19,7 @@ module.exports = {
           HeadingTextColour: "#C4C4C4",
           Hover: "#24292E",
           Active: "#24292E",
+          Text: "#FFFFFF",
           Icons: {
             Home: "#00D8FF",
             Contact: "#42A5F5",
@@ -26,6 +27,20 @@ module.exports = {
             Github: "#FFFFFF",
             About: "#E44D26"
           }
+        },
+        PageNavbar: {
+          Bg: "#1F2428",
+          Text: "#FFFFFF",
+          HoverPageBg: "#24292E",
+          ActivePageBg: "#24292E",
+          ActivePageBorder: "#C4C4C4",
+          Icons: {
+            Home: "#00D8FF",
+            Contact: "#42A5F5",
+            Projects: "#FFCA28",
+            Github: "#FFFFFF",
+            About: "#E44D26"
+          },
         }
       },
     },

@@ -1,8 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 const Home = () => {
+    // useSelector()
     return (
-        <div>Opening page</div>
+        <div>
+            Opening Page
+        </div>
     )
 }
 

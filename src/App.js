@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import PageNavbar from "./Components/Code-Editor/PageNavbar";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";

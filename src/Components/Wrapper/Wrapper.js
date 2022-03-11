@@ -1,4 +1,5 @@
 import React from 'react'
+import PageNavbar from '../Code-Editor/PageNavbar';
 import FileIndexer from './Wrapper-components/FileIndexer';
 import Navbar from './Wrapper-components/Navbar';
 import Sidebar from './Wrapper-components/Sidebar';
@@ -10,7 +11,10 @@ const Wrapper = (props) => {
             <div className='flex flex-1'>
                 <Sidebar></Sidebar>
                 <FileIndexer></FileIndexer>
-                { props.children }
+                <div className='flex flex-col w-full bg-PageNavbar-ActivePageBg'>
+                    <PageNavbar></PageNavbar>
+                    { props.children }
+                </div>
             </div>
             <Taskbar></Taskbar>
         </div>
