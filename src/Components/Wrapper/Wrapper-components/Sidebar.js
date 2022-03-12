@@ -48,9 +48,9 @@ const Sidebar = () => {
                         <NavLink
                             key={ object.name }
                             to={ `/${object.name}` }
-                            className={ `hover:text-Sidebar-IconHover  ${activeIcon === object.name ? activeIconColor : ''}` }
+                            className={ `${activeIcon === object.name ? activeIconColor : ''}` }
                         >
-                            <li className={ `${activeIcon === object.name ? activeIconBorder : ''} p-2` }>
+                            <li className={ `${activeIcon === object.name ? activeIconBorder : ''} hover:bg-FileIndexer-Bg p-2` }>
                                 { object.icon }
                             </li>
                         </NavLink>

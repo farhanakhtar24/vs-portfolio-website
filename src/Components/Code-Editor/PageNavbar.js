@@ -46,7 +46,7 @@ const PageNavbar = () => {
                 { pageList.map(pageObject => {
                     return (
                         <NavLink to={ `/${pageObject.name}` }>
-                            <li className={ `flex items-center gap-2 px-7 py-1.5 border-x-2 border-x-PageNavbar-HoverPageBg hover:bg-PageNavbar-HoverPageBg ${activePage === pageObject.name ? activePageClass : 'bg-PageNavbar-Bg'}` }>
+                            <li className={ `flex items-center gap-2 px-7 py-1.5 border-y-2 border-x border-PageNavbar-HoverPageBg hover:bg-PageNavbar-HoverPageBg ${activePage === pageObject.name ? activePageClass : 'bg-PageNavbar-Bg'}` }>
                                 { pageObject.page }
                                 { `${pageObject.name} ${pageObject.extension}` }
                             </li>
