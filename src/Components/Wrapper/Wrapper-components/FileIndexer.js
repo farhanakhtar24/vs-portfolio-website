@@ -20,7 +20,7 @@ const FileIndexer = () => {
     const divClassName = 'flex px-5 py-1 gap-2 items-center hover:bg-FileIndexer-Hover';
 
     return (
-        <div className=' flex flex-col gap-2 bg-FileIndexer-Bg w-60 border-r-2 border-gray-900'>
+        <div className='hidden md:flex flex-col gap-2 bg-FileIndexer-Bg w-60 border-r-2 border-gray-900'>
             {/* Explorer div */ }
             <div className='FileIndexer-Headings'>
                 Explorer
@@ -36,7 +36,7 @@ const FileIndexer = () => {
                 </div>
 
                 {/* index list */ }
-                <ul className={ `text-FileIndexer-Text text-sm font-normal ${arrowDirection === 'rotate-0' ? '' : 'hidden'}` }>
+                <ul className={ `text-FileIndexer-Text text-xs lg:text-sm font-normal ${arrowDirection === 'rotate-0' ? '' : 'hidden'}` }>
                     <Link to='/home'>
                         <li className={ `${divClassName} ${activePage === 'home' ? 'bg-FileIndexer-Active' : ''}` }>
                             <HomePageIcon className='text-FileIndexer-Icons-Home' />

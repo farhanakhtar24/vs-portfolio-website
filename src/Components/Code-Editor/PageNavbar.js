@@ -41,17 +41,16 @@ const PageNavbar = () => {
     const activePageClass = 'bg-PageNavbar-ActivePageBg border-t-2 border-t-PageNavbar-ActivePageBorder';
 
     return (
-        <div className='text-sm text-PageNavbar-Text bg-PageNavbar-Bg'>
-            <ul className='flex'>
+        <div className=' text-xs lg:text-sm text-PageNavbar-Text bg-PageNavbar-Bg '>
+            <ul className='grid grid-cols-3 sm:flex overflow-scroll sm:overflow-auto'>
                 { pageList.map(pageObject => {
-                    return (
-                        <NavLink to={ `/${pageObject.name}` }>
-                            <li className={ `flex items-center gap-2 px-7 py-1.5 border-y-2 border-x border-PageNavbar-HoverPageBg hover:bg-PageNavbar-HoverPageBg ${activePage === pageObject.name ? activePageClass : 'bg-PageNavbar-Bg'}` }>
-                                { pageObject.page }
-                                { `${pageObject.name} ${pageObject.extension}` }
-                            </li>
-                        </NavLink>
-                    )
+                    return <NavLink to={ `/${pageObject.name}` }>
+                        <li className={ `flex items-center justify-center truncate gap-2 px-4 py-1 lg:px-7 lg:py-1.5 border-y-2 border-x border-PageNavbar-HoverPageBg hover:bg-PageNavbar-HoverPageBg ${activePage === pageObject.name ? activePageClass : 'bg-PageNavbar-Bg'}` }>
+                            { pageObject.page }
+                            { `${pageObject.name} ${pageObject.extension}` }
+                        </li>
+                    </NavLink>
+
                 }) }
             </ul>
         </div>

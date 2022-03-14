@@ -11,9 +11,11 @@ const Wrapper = (props) => {
             <div className='flex flex-1'>
                 <Sidebar></Sidebar>
                 <FileIndexer></FileIndexer>
-                <div className='flex flex-col w-full bg-PageNavbar-ActivePageBg'>
+                <div className='flex flex-col h-full w-full bg-PageNavbar-ActivePageBg'>
                     <PageNavbar></PageNavbar>
-                    { props.children }
+                    <div className='h-full w-full jetBrainMono'>
+                        { props.children }
+                    </div>
                 </div>
             </div>
             <Taskbar></Taskbar>

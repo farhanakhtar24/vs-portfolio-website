@@ -44,6 +44,9 @@ module.exports = {
         }
       },
     },
+    backgroundImage: {
+      'i-code-websites': "url('./Assets/I_CODE_WEBSITES.svg')",
+    }
   },
   plugins: [],
 }

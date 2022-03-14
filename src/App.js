@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import PageNavbar from "./Components/Code-Editor/PageNavbar";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
@@ -22,16 +21,14 @@ function App() {
 
   return (
     <Wrapper>
-      <div className="font-mono">
-        <Routes>
-          <Route path="/about" element={ <About></About> } />
-          <Route path="/contact" element={ <Contact></Contact> } />
-          <Route path="/home" element={ <Home></Home> } />
-          <Route path="/projects" element={ <Projects></Projects> } />
-          <Route path="/github" element={ <Github></Github> } />
-          <Route path="*" element={ <Navigate to="/home" replace /> } />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/about" element={ <About></About> } />
+        <Route path="/contact" element={ <Contact></Contact> } />
+        <Route path="/home" element={ <Home></Home> } />
+        <Route path="/projects" element={ <Projects></Projects> } />
+        <Route path="/github" element={ <Github></Github> } />
+        <Route path="*" element={ <Navigate to="/home" replace /> } />
+      </Routes>
     </Wrapper>
   );
 }
